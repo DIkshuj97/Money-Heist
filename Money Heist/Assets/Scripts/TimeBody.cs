@@ -16,11 +16,11 @@ public class TimeBody : MonoBehaviour
    
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Question))
         {
             StartRewind();
         }
-        if (Input.GetKeyUp(KeyCode.R))
+        if (Input.GetKeyUp(KeyCode.Question))
         {
             StopRewind();
         }
