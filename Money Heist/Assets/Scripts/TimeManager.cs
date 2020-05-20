@@ -21,6 +21,10 @@ public class TimeManager : MonoBehaviour
 
     private void Update()
     {
+        if(slowmoBar==null)
+        {
+            slowmoBar= FindObjectOfType<GameCanvas>();
+        }
         if(Input.GetKeyDown(KeyCode.RightShift))
         {
             if(GameIsSlowed)
