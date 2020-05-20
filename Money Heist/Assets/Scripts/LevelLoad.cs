@@ -35,12 +35,17 @@ public class LevelLoad : MonoBehaviour
 
     public void Restart()
     {
-        if (FindObjectOfType<GameCanvas>().RestartTimes>=0)
+        if (FindObjectOfType<GameCanvas>().RestartTimes>0)
         {
             Time.timeScale = 1;
             FindObjectOfType<GameCanvas>().RestoreInitialStats();
             FindObjectOfType<GameCanvas>().RestartTimes--;
             SceneManager.LoadScene(currentScene);
+        }
+
+        else
+        {
+            SceneManager.LoadScene("Main Menu");
         }
     }
 
