@@ -30,13 +30,15 @@ public class DialogueManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-
+        
         DisplayNextSentence();
+        
     }
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count==0)
+        
+        if (sentences.Count==0)
         {
             EndDialogue();
             return;
@@ -49,12 +51,14 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence(string sentence)
     {
+      
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
             yield return null;
         }
+        
     }
 
     void EndDialogue()
@@ -64,6 +68,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DialogueEndFunction()
     {
+        Time.timeScale = 1;
         if (sentences.Count == 0)
         {
             DialogueEnd.SetActive(true);

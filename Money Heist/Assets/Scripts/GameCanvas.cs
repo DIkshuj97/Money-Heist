@@ -153,4 +153,11 @@ public class GameCanvas : MonoBehaviour
         health = maxHealth;
         Ammo = TotalAmmo;
     }
+
+    public void InitialHealth()
+    {
+        maxHealth = 100;
+        health = maxHealth;
+        SetMaxHealth(maxHealth);
+    }
 }

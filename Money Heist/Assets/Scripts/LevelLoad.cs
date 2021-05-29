@@ -19,7 +19,7 @@ public class LevelLoad : MonoBehaviour
     }
 
     public void LoadFirstLevel()
-    { 
+    {
         SceneManager.LoadScene("Level 1");
     }
 
@@ -30,6 +30,12 @@ public class LevelLoad : MonoBehaviour
 
     public void LoadNextLevel()
     {
+        Debug.Log(SceneManager.GetActiveScene().buildIndex);
+        if (SceneManager.GetActiveScene().buildIndex==2)
+        {
+            
+            FindObjectOfType<GameCanvas>().InitialHealth();
+        }
         SceneManager.LoadScene(currentScene + 1);
     }
 

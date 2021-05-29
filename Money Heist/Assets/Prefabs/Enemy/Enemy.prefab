@@ -198,7 +198,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126165413321245068}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -391,6 +391,7 @@ GameObject:
   - component: {fileID: 2150254299546831384}
   - component: {fileID: 5397648355189508060}
   - component: {fileID: 4119059301764291212}
+  - component: {fileID: 4045590319272709375}
   m_Layer: 0
   m_Name: Line Of Sight
   m_TagString: Untagged
@@ -494,6 +495,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInSight: 0
+--- !u!70 &4045590319272709375
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3242962834333832258}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0032343876, y: 0.5057994}
+  m_Size: {x: 0.4376432, y: 0.17320013}
+  m_Direction: 1
 --- !u!1 &7113888520111488852
 GameObject:
   m_ObjectHideFlags: 0
